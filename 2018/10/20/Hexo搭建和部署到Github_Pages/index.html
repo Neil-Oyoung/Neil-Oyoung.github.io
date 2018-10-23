@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Hexo搭建和部署到Github PagesSTEP 1 创建github pages代码库Create a new repository 代码库名应为用户名.github.io，如Neil-Oyoung.github.io。 STEP 2 准备本地代码库2.1 生成Hexo项目12hexo init Neil-Oyoung.github.iocd Neil-Oyoung.github.io 2.">
+<meta name="keywords" content="Hexo,Github Pages,NexT,Gitment">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建和部署到Github Pages">
+<meta property="og:url" content="http://yoursite.com/2018/10/20/Hexo搭建和部署到Github_Pages/index.html">
+<meta property="og:site_name" content="Neil&#39;s MEMO">
+<meta property="og:description" content="Hexo搭建和部署到Github PagesSTEP 1 创建github pages代码库Create a new repository 代码库名应为用户名.github.io，如Neil-Oyoung.github.io。 STEP 2 准备本地代码库2.1 生成Hexo项目12hexo init Neil-Oyoung.github.iocd Neil-Oyoung.github.io 2.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-23T06:48:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo搭建和部署到Github Pages">
+<meta name="twitter:description" content="Hexo搭建和部署到Github PagesSTEP 1 创建github pages代码库Create a new repository 代码库名应为用户名.github.io，如Neil-Oyoung.github.io。 STEP 2 准备本地代码库2.1 生成Hexo项目12hexo init Neil-Oyoung.github.iocd Neil-Oyoung.github.io 2.">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/20/Hexo搭建和部署到Github_Pages/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Hexo搭建和部署到Github Pages | Neil's MEMO</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Neil's MEMO</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">点滴积累，功不唐捐。</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/20/Hexo搭建和部署到Github_Pages/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Oyoung">
+      <meta itemprop="description" content="Neil's MEMO.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's MEMO">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo搭建和部署到Github Pages
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-10-20T00:00:00+08:00">2018-10-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-23 14:48:10" itemprop="dateModified" datetime="2018-10-23T14:48:10+08:00">2018-10-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/20/Hexo搭建和部署到Github_Pages/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/20/Hexo搭建和部署到Github_Pages/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Hexo搭建和部署到Github-Pages"><a href="#Hexo搭建和部署到Github-Pages" class="headerlink" title="Hexo搭建和部署到Github Pages"></a>Hexo搭建和部署到Github Pages</h1><h2 id="STEP-1-创建github-pages代码库"><a href="#STEP-1-创建github-pages代码库" class="headerlink" title="STEP 1 创建github pages代码库"></a>STEP 1 创建<code>github pages</code>代码库</h2><p><a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a></p>
+<p>代码库名应为<code>用户名.github.io</code>，如Neil-Oyoung.github.io。</p>
+<h2 id="STEP-2-准备本地代码库"><a href="#STEP-2-准备本地代码库" class="headerlink" title="STEP 2 准备本地代码库"></a>STEP 2 准备本地代码库</h2><h3 id="2-1-生成Hexo项目"><a href="#2-1-生成Hexo项目" class="headerlink" title="2.1 生成Hexo项目"></a>2.1 生成Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init Neil-Oyoung.github.io</span><br><span class="line"><span class="built_in">cd</span> Neil-Oyoung.github.io</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-体验本地Hexo"><a href="#2-2-体验本地Hexo" class="headerlink" title="2.2 体验本地Hexo"></a>2.2 体验本地Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务后就可通过浏览器到<code>http://localhost:4000</code>体验Hexo了。</p>
+<h3 id="2-3-添加Git版本管理"><a href="#2-3-添加Git版本管理" class="headerlink" title="2.3 添加Git版本管理"></a>2.3 添加Git版本管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"base"</span></span><br><span class="line">git push -u origin master</span><br><span class="line">git branch hexo</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="STEP-3-部署到Github-Pages"><a href="#STEP-3-部署到Github-Pages" class="headerlink" title="STEP 3 部署到Github Pages"></a>STEP 3 部署到<code>Github Pages</code></h2><h3 id="3-1-指定部署代码库与分支"><a href="#3-1-指定部署代码库与分支" class="headerlink" title="3.1 指定部署代码库与分支"></a>3.1 指定部署代码库与分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>编辑Hexo配置文件，修改deploy项为：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span> </span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/Neil-Oyoung/Neil-Oyoung.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h4 id="（Optional）3-1-1-修订网站标题与作者"><a href="#（Optional）3-1-1-修订网站标题与作者" class="headerlink" title="（Optional）3.1.1 修订网站标题与作者"></a>（Optional）3.1.1 修订网站标题与作者</h4><p>编辑Hexo配置文件，修改title、subtitle和author项为：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Neil's</span> <span class="string">MEMO</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">点滴积累，功不唐捐。</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Neil's</span> <span class="string">MEMO.</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Neil</span> <span class="string">Oyoung</span></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line"><span class="attr">timezone:</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2-生成静态文件并部署"><a href="#3-2-生成静态文件并部署" class="headerlink" title="3.2 生成静态文件并部署"></a>3.2 生成静态文件并部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-体验远程Hexo"><a href="#3-3-体验远程Hexo" class="headerlink" title="3.3 体验远程Hexo"></a>3.3 体验远程Hexo</h3><p>部署成功后即可通过浏览器到<code>https://neil-oyoung.github.io/</code>体验部署后的Hexo了。</p>
+<h3 id="3-4-保存并提交修改"><a href="#3-4-保存并提交修改" class="headerlink" title="3.4 保存并提交修改"></a>3.4 保存并提交修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"config deploy"</span></span><br><span class="line">git push -u origin hexo</span><br></pre></td></tr></table></figure>
+<h2 id="Optional-STEP-4-添加NexT主题"><a href="#Optional-STEP-4-添加NexT主题" class="headerlink" title="(Optional) STEP 4 添加NexT主题"></a>(Optional) STEP 4 添加NexT主题</h2><h3 id="4-1-Fork-NexT代码库"><a href="#4-1-Fork-NexT代码库" class="headerlink" title="4.1 Fork NexT代码库"></a>4.1 Fork NexT代码库</h3><p>前往<code>https://github.com/theme-next/hexo-theme-next</code>，fork到自己名下（此例为<code>https://github.com/Neil-Oyoung/hexo-theme-next.git</code>）。</p>
+<h3 id="4-2-添加NexT子模块"><a href="#4-2-添加NexT子模块" class="headerlink" title="4.2 添加NexT子模块"></a>4.2 添加NexT子模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/Neil-Oyoung/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="4-3-启用NexT主题"><a href="#4-3-启用NexT主题" class="headerlink" title="4.3 启用NexT主题"></a>4.3 启用NexT主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>编辑Hexo配置文件，修改theme项为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<h4 id="（Optional）4-3-1-切换为Pisces风格"><a href="#（Optional）4-3-1-切换为Pisces风格" class="headerlink" title="（Optional）4.3.1 切换为Pisces风格"></a>（Optional）4.3.1 切换为Pisces风格</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+<p>编辑主题配置文件，修改scheme项为：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-4-生成静态文件并部署"><a href="#4-4-生成静态文件并部署" class="headerlink" title="4.4 生成静态文件并部署"></a>4.4 生成静态文件并部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h3 id="4-5-体验NexT主题"><a href="#4-5-体验NexT主题" class="headerlink" title="4.5 体验NexT主题"></a>4.5 体验NexT主题</h3><p>部署成功后即可通过浏览器到<code>https://neil-oyoung.github.io/</code>体验NexT主题了。</p>
+<h3 id="4-6-保存并提交修改"><a href="#4-6-保存并提交修改" class="headerlink" title="4.6 保存并提交修改"></a>4.6 保存并提交修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"config scheme"</span></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ../..</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"enable NexT theme"</span></span><br><span class="line">git push -u origin hexo</span><br></pre></td></tr></table></figure>
+<h2 id="Optional-STEP-5-添加Gitment评论系统"><a href="#Optional-STEP-5-添加Gitment评论系统" class="headerlink" title="(Optional) STEP 5 添加Gitment评论系统"></a>(Optional) STEP 5 添加Gitment评论系统</h2><h3 id="5-1-注册OAuth-Apps"><a href="#5-1-注册OAuth-Apps" class="headerlink" title="5.1 注册OAuth Apps"></a>5.1 注册OAuth Apps</h3><p>到<a href="https://github.com/settings/developers" target="_blank" rel="noopener">这里</a>注册获取<code>Client ID</code>和<code>Client Secret</code>。参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Application name：Gitment</span><br><span class="line">Homepage URL：https://neil-oyoung.github.io/</span><br><span class="line">Application description：Blog comment system</span><br><span class="line">Authorization callback URL：https://neil-oyoung.github.io/</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-创建gitment-comments代码库"><a href="#5-2-创建gitment-comments代码库" class="headerlink" title="5.2 创建gitment-comments代码库"></a>5.2 创建<code>gitment-comments</code>代码库</h3><p>为了存储评论，需要创建新的代码库（此例为<code>https://github.com/Neil-Oyoung/gitment-comments.git</code>）。</p>
+<h3 id="5-3-启用Gitment"><a href="#5-3-启用Gitment" class="headerlink" title="5.3 启用Gitment"></a>5.3 启用Gitment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+<p>编辑主题配置文件（此例为NexT主题），根据上面两步的准备修改gitment项为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">gitment:</span><br><span class="line">  enable: true</span><br><span class="line">  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span><br><span class="line">  count: true # Show comments count in post meta area</span><br><span class="line">  lazy: false # Comments lazy loading with a button</span><br><span class="line">  cleanly: false # Hide &apos;Powered by ...&apos; on footer, and more</span><br><span class="line">  language: # Force language, or auto switch by theme</span><br><span class="line">  github_user: Neil-Oyoung # MUST HAVE, Your Github Username</span><br><span class="line">  github_repo: gitment-comments # MUST HAVE, The name of the repo you use to store Gitment comments</span><br><span class="line">  client_id: xxxxxxxxx # MUST HAVE, Github client id for the Gitment</span><br><span class="line">  client_secret: xxxxxxxxx # EITHER this or proxy_gateway, Github access secret token for the Gitment</span><br><span class="line">  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect</span><br><span class="line">  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled</span><br></pre></td></tr></table></figure>
+<h3 id="5-4-生成静态文件并部署"><a href="#5-4-生成静态文件并部署" class="headerlink" title="5.4 生成静态文件并部署"></a>5.4 生成静态文件并部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h3 id="5-5-体验Gitment"><a href="#5-5-体验Gitment" class="headerlink" title="5.5 体验Gitment"></a>5.5 体验Gitment</h3><p>部署成功后即可通过浏览器到<code>https://neil-oyoung.github.io/</code>体验部署后的Gitment了。</p>
+<h3 id="5-6-保存并提交修改"><a href="#5-6-保存并提交修改" class="headerlink" title="5.6 保存并提交修改"></a>5.6 保存并提交修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"config gitment"</span></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ../..</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"enable gitment"</span></span><br><span class="line">git push -u origin hexo</span><br></pre></td></tr></table></figure>
+<h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><h3 id="Github-Pages-doesn’t-Update"><a href="#Github-Pages-doesn’t-Update" class="headerlink" title="Github Pages doesn’t Update"></a>Github Pages doesn’t Update</h3><ol>
+<li>Check <code>https://status.github.com</code> first, make sure Github is operating normally.</li>
+<li>Check Github Pages’s settings(e.g. <a href="https://github.com/Neil-Oyoung/Neil-Oyoung.github.io/settings)" target="_blank" rel="noopener">https://github.com/Neil-Oyoung/Neil-Oyoung.github.io/settings)</a>, it should tell you something wrong.</li>
+<li>Time zone might be different from article’s date. Edit <code>_config.yml</code> to config <code>timezone</code> or make <code>future</code> as <code>true</code>.</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a></li>
+<li><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Docs</a></li>
+<li><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">Next</a></li>
+<li><a href="https://ryanluoxu.github.io/2017/11/27/Hexo-Next-%E6%B7%BB%E5%8A%A0-Gitment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">Hexo-Next 添加 Gitment 评论系统</a></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Github-Pages/" rel="tag"># Github Pages</a>
+          
+            <a href="/tags/NexT/" rel="tag"># NexT</a>
+          
+            <a href="/tags/Gitment/" rel="tag"># Gitment</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/21/发朋友圈的动机新认识/" rel="prev" title="发朋友圈的动机新认识">
+                发朋友圈的动机新认识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Neil Oyoung</p>
+              <p class="site-description motion-element" itemprop="description">Neil's MEMO.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo搭建和部署到Github-Pages"><span class="nav-number">1.</span> <span class="nav-text">Hexo搭建和部署到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STEP-1-创建github-pages代码库"><span class="nav-number">1.1.</span> <span class="nav-text">STEP 1 创建github pages代码库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STEP-2-准备本地代码库"><span class="nav-number">1.2.</span> <span class="nav-text">STEP 2 准备本地代码库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-生成Hexo项目"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 生成Hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-体验本地Hexo"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 体验本地Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-添加Git版本管理"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 添加Git版本管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STEP-3-部署到Github-Pages"><span class="nav-number">1.3.</span> <span class="nav-text">STEP 3 部署到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-指定部署代码库与分支"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 指定部署代码库与分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（Optional）3-1-1-修订网站标题与作者"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">（Optional）3.1.1 修订网站标题与作者</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-生成静态文件并部署"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 生成静态文件并部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-体验远程Hexo"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 体验远程Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-保存并提交修改"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 保存并提交修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-STEP-4-添加NexT主题"><span class="nav-number">1.4.</span> <span class="nav-text">(Optional) STEP 4 添加NexT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Fork-NexT代码库"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 Fork NexT代码库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-添加NexT子模块"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 添加NexT子模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-启用NexT主题"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 启用NexT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（Optional）4-3-1-切换为Pisces风格"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">（Optional）4.3.1 切换为Pisces风格</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-生成静态文件并部署"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 生成静态文件并部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-体验NexT主题"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 体验NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-保存并提交修改"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6 保存并提交修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-STEP-5-添加Gitment评论系统"><span class="nav-number">1.5.</span> <span class="nav-text">(Optional) STEP 5 添加Gitment评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-注册OAuth-Apps"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 注册OAuth Apps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-创建gitment-comments代码库"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 创建gitment-comments代码库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-启用Gitment"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 启用Gitment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-生成静态文件并部署"><span class="nav-number">1.5.4.</span> <span class="nav-text">5.4 生成静态文件并部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-体验Gitment"><span class="nav-number">1.5.5.</span> <span class="nav-text">5.5 体验Gitment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-保存并提交修改"><span class="nav-number">1.5.6.</span> <span class="nav-text">5.6 保存并提交修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trouble-Shooting"><span class="nav-number">1.6.</span> <span class="nav-text">Trouble Shooting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Pages-doesn’t-Update"><span class="nav-number">1.6.1.</span> <span class="nav-text">Github Pages doesn’t Update</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.7.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil Oyoung</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'Neil-Oyoung',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '6d8c0de3b8fdc713d7b994744106567ff243e58a',
+            
+                client_id: '44633418ac9325922e78'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
