@@ -1,6 +1,6 @@
 ---
 title: Hexo搭建和部署到Github Pages
-date: 
+date: 2018-10-20
 tags: [Hexo,Github Pages,NexT,Gitment]
 ---
 # Hexo搭建和部署到Github Pages
@@ -218,6 +218,14 @@ git add .
 git commit -m "enable gitment"
 git push -u origin hexo
 ```
+
+## Trouble Shooting
+
+### Github Pages doesn't Update
+
+1. Check `https://status.github.com` first, make sure Github is operating normally.
+2. Check Github Pages's settings(e.g. https://github.com/Neil-Oyoung/Neil-Oyoung.github.io/settings), it should tell you something wrong.
+3. Time zone might be different from article's date. Edit `_config.yml` to config `timezone` or make `future` as `true`.
 
 ## Reference
 
