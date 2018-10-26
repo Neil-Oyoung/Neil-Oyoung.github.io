@@ -108,23 +108,25 @@
 
 
 
-  <meta name="description" content="Neil&apos;s MEMO.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Neil&#39;s MEMO">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="IMU标定之IMU-TK使用IMU前往往需要标定其内在参数，如尺度因子，轴安转误差和零偏，imu_tk是其中一款标定工具。 为了方便ROS用户，我个人为它加了简单的ROS封装，代码见https://github.com/Neil-Oyoung/imu_tk。">
+<meta name="keywords" content="imu_tk,IMU标定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IMU标定之IMU-TK">
+<meta property="og:url" content="http://yoursite.com/2018/10/26/IMU标定之IMU-TK/index.html">
 <meta property="og:site_name" content="Neil&#39;s MEMO">
-<meta property="og:description" content="Neil&apos;s MEMO.">
+<meta property="og:description" content="IMU标定之IMU-TK使用IMU前往往需要标定其内在参数，如尺度因子，轴安转误差和零偏，imu_tk是其中一款标定工具。 为了方便ROS用户，我个人为它加了简单的ROS封装，代码见https://github.com/Neil-Oyoung/imu_tk。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-26T13:24:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s MEMO">
-<meta name="twitter:description" content="Neil&apos;s MEMO.">
+<meta name="twitter:title" content="IMU标定之IMU-TK">
+<meta name="twitter:description" content="IMU标定之IMU-TK使用IMU前往往需要标定其内在参数，如尺度因子，轴安转误差和零偏，imu_tk是其中一款标定工具。 为了方便ROS用户，我个人为它加了简单的ROS封装，代码见https://github.com/Neil-Oyoung/imu_tk。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/10/26/IMU标定之IMU-TK/">
 
 
 
@@ -134,7 +136,7 @@
   };
 </script>
 
-  <title>Neil's MEMO</title>
+  <title>IMU标定之IMU-TK | Neil's MEMO</title>
   
 
 
@@ -181,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -223,7 +224,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
@@ -267,9 +268,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -301,11 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/IMU标定之IMU-TK/" itemprop="url">
-                  IMU标定之IMU-TK
-                </a>
+          <h1 class="post-title" itemprop="name headline">IMU标定之IMU-TK
               
             
           </h1>
@@ -344,6 +341,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/26/IMU标定之IMU-TK/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/26/IMU标定之IMU-TK/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -368,13 +375,9 @@
       
 
       
-        
-          
-            <h1 id="IMU标定之IMU-TK"><a href="#IMU标定之IMU-TK" class="headerlink" title="IMU标定之IMU-TK"></a>IMU标定之IMU-TK</h1><p>使用IMU前往往需要标定其内在参数，如尺度因子，轴安转误差和零偏，<a href="https://bitbucket.org/alberto_pretto/imu_tk" target="_blank" rel="noopener">imu_tk</a>是其中一款标定工具。</p>
+        <h1 id="IMU标定之IMU-TK"><a href="#IMU标定之IMU-TK" class="headerlink" title="IMU标定之IMU-TK"></a>IMU标定之IMU-TK</h1><p>使用IMU前往往需要标定其内在参数，如尺度因子，轴安转误差和零偏，<a href="https://bitbucket.org/alberto_pretto/imu_tk" target="_blank" rel="noopener">imu_tk</a>是其中一款标定工具。</p>
 <p>为了方便ROS用户，我个人为它加了简单的ROS封装，代码见<code>https://github.com/Neil-Oyoung/imu_tk</code>。</p>
 
-          
-        
       
     </div>
 
@@ -392,339 +395,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/21/发朋友圈的动机新认识/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Oyoung">
-      <meta itemprop="description" content="Neil's MEMO.">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's MEMO">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/21/发朋友圈的动机新认识/" itemprop="url">
-                  发朋友圈的动机新认识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2018-10-21T00:00:00+08:00">2018-10-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-23 14:24:07" itemprop="dateModified" datetime="2018-10-23T14:24:07+08:00">2018-10-23</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/imu-tk/" rel="tag"># imu_tk</a>
           
-            
+            <a href="/tags/IMU标定/" rel="tag"># IMU标定</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="发朋友圈的动机新认识"><a href="#发朋友圈的动机新认识" class="headerlink" title="发朋友圈的动机新认识"></a>发朋友圈的动机新认识</h1><h2 id="旧观念"><a href="#旧观念" class="headerlink" title="旧观念"></a>旧观念</h2><blockquote>
-<p>对订阅者负责，不打扰。</p>
-</blockquote>
-<p>好友即订阅者，自己相当于内容生产者。</p>
-<p>应该珍惜好友的信任与自己的名声，根据好友的偏好订制内容分发，做到不打扰。</p>
-<p>或者，只发布含重大意义或深刻感悟的内容，维护个人形象。</p>
-<h2 id="新认识"><a href="#新认识" class="headerlink" title="新认识"></a>新认识</h2><blockquote>
-<p>提供非正式交流的机会与渠道。</p>
-</blockquote>
-<p>朋友之间，很多时候随生活向前而交集渐少，虽说友谊犹在，但距离感使得大家不容易保持常规联系。</p>
-<p>深刻的经历感悟不常有，而小确幸常在。</p>
-<p>一些细微感悟和纪实性的状态往往提供了一个渠道供他人了解近况，产生互动，缩短距离。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>发朋友圈的动机不仅仅是建立形象，扩大影响力，它还承载着让他人了解近况的职能，所以适当展示平淡细微的感悟亦无不妥，毕竟社交属性不能丢呀。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/20/Hexo搭建和部署到Github_Pages/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Oyoung">
-      <meta itemprop="description" content="Neil's MEMO.">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's MEMO">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/20/Hexo搭建和部署到Github_Pages/" itemprop="url">
-                  Hexo搭建和部署到Github Pages
-                </a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/10/21/发朋友圈的动机新认识/" rel="next" title="发朋友圈的动机新认识">
+                <i class="fa fa-chevron-left"></i> 发朋友圈的动机新认识
+              </a>
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-10-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-10-20T00:00:00+08:00">2018-10-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-23 14:48:10" itemprop="dateModified" datetime="2018-10-23T14:48:10+08:00">2018-10-23</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Hexo搭建和部署到Github-Pages"><a href="#Hexo搭建和部署到Github-Pages" class="headerlink" title="Hexo搭建和部署到Github Pages"></a>Hexo搭建和部署到Github Pages</h1><h2 id="STEP-1-创建github-pages代码库"><a href="#STEP-1-创建github-pages代码库" class="headerlink" title="STEP 1 创建github pages代码库"></a>STEP 1 创建<code>github pages</code>代码库</h2><p><a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a></p>
-<p>代码库名应为<code>用户名.github.io</code>，如Neil-Oyoung.github.io。</p>
-<h2 id="STEP-2-准备本地代码库"><a href="#STEP-2-准备本地代码库" class="headerlink" title="STEP 2 准备本地代码库"></a>STEP 2 准备本地代码库</h2><h3 id="2-1-生成Hexo项目"><a href="#2-1-生成Hexo项目" class="headerlink" title="2.1 生成Hexo项目"></a>2.1 生成Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init Neil-Oyoung.github.io</span><br><span class="line"><span class="built_in">cd</span> Neil-Oyoung.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-体验本地Hexo"><a href="#2-2-体验本地Hexo" class="headerlink" title="2.2 体验本地Hexo"></a>2.2 体验本地Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务后就可通过浏览器到<code>http://localhost:4000</code>体验Hexo了。</p>
-<h3 id="2-3-添加Git版本管理"><a href="#2-3-添加Git版本管理" class="headerlink" title="2.3 添加Git版本管理"></a>2.3 添加Git版本管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"base"</span></span><br><span class="line">git push -u origin master</span><br><span class="line">git branch hexo</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/20/Hexo搭建和部署到Github_Pages/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -734,14 +436,22 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -762,8 +472,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -833,6 +552,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IMU标定之IMU-TK"><span class="nav-number">1.</span> <span class="nav-text">IMU标定之IMU-TK</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -970,6 +705,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -999,6 +738,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1540558384000',
+            owner: 'Neil-Oyoung',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '6d8c0de3b8fdc713d7b994744106567ff243e58a',
+            
+                client_id: '44633418ac9325922e78'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
